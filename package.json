@@ -1,16 +1,13 @@
 {
-  "name": "api-mysql-verifica",
+  "name": "api-render",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "run": "node index.js"
+    "start": "node index.js"
   },
   "dependencies": {
-    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "mysql2": "^3.6.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "mysql2": "^3.9.2",
+    "cors": "^2.8.5"
   }
 }
