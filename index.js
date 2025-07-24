@@ -19,7 +19,7 @@ app.get('/verifica-email', async (req, res) => {
   if (!email) return res.status(400).json({ erro: 'Email obrigatório' })
 
   try {
-    const [rows] = await pool.query('SELECT * FROM users WHERE email = ?', [email])
+    const [rows] = await pool.query('SELECT email FROM users WHERE email = ?', [email])
     res.json({ existe: rows.length > 0 })
   } catch (err) {
     res.status(500).json({ erro: 'Erro ao consultar o banco', detalhe: err.message })
